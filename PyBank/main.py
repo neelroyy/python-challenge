@@ -74,7 +74,7 @@ with open("analysis/PyBank.txt", 'w') as text:
     text.write("----------------\n") 
     text.write("    Total Months: " + str(count) + "\n")
     text.write("    Total Profits: " + "$" + str(total_profit) +"\n")
-    text.write("    Average Change: " + '$' + str(int(average_change)) + "\n")
+    text.write("    Average Change: " + '$' + str(round(float(average_change),2)) + "\n")
     text.write("    Greatest Increase in Profits: " + str(increase_date) 
     + " ($" + str(greatest_increase_profits) + ")\n")
     text.write("    Greatest Decrease in Profits: " + str(decrease_date) 
