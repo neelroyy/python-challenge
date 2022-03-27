@@ -41,7 +41,7 @@ with open(PyPoll_csv) as csvfile:
 print("Election Results")   
 print("Total Votes :" + str(count))    
 for i in range(len(unique_candidate)):
-            print(unique_candidate[i] + ": " + str(vote_percent[i]) 
+            print(unique_candidate[i] + ": " + (str(format(vote_percent[i], ".3f"))) 
             +"% (" + str(vote_count[i])+ ")")
 print("The winner is: " + winner)
 
@@ -49,7 +49,7 @@ with open("analysis/PyPoll.txt", 'w') as text:
     text.write("Election Results\n")
     text.write("Total Vote: " + str(count) + "\n")
     for i in range(len(set(unique_candidate))):
-        text.write(unique_candidate[i] + ": " + str(vote_percent[i]) 
+        text.write(unique_candidate[i] + ": " + (str(format(vote_percent[i], ".3f"))) 
         +"% (" + str(vote_count[i]) + ")\n")
     text.write("The winner is: " + winner + "\n")
 
